@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="vote" namespace="/vote" extends="app-default">
+
+		<action name="iniciandoVotacaoAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="iniciandoVotacao">
+			<result name="success" type="redirect">
+				/jsp/votacao.jsp
+			</result>
+		</action>
+		
+		<action name="iniciandoFilmeAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="iniciandoFilme">
+			<result name="success" type="redirect">
+				/jsp/filme.jsp
+			</result>
+		</action>
+		
+		<action name="novoFilmeAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="novoFilme">
+			<result name="success" type="redirect">
+				/conteudo/filme-conteudo.jsp
+			</result>
+		</action>
+		
+		<action name="excluirFilmeAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="excluirFilme">
+			<result name="success" type="redirect">
+				/conteudo/filme-conteudo.jsp
+			</result>
+		</action>
+		
+		<action name="gostarNaoGostarFilmeAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="gostarNaoGostarFilme">
+			<result name="success" type="redirect">
+				/conteudo/votacao-g-ng-conteudo.jsp
+			</result>
+		</action>
+		
+		<action name="resultadoParcialAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="resultadoParcial">
+			<result name="success" type="redirect">
+				/jsp/votacao-parcial.jsp
+			</result>
+		</action>
+		
+		<action name="computarVotoAction"
+			class="br.com.bluesoft.CONTROLLER.VoteAction" method="computarVoto">
+		</action>
+		
+	</package>
+
+</struts>
